@@ -6,6 +6,7 @@ from moveit_msgs.srv import GetPositionFKRequest
 from moveit_msgs.srv import GetPositionFKResponse
 from sensor_msgs.msg import JointState
 
+### define the forward kinematic class
 
 class GetFK(object):
     def __init__(self, fk_link, frame_id):
@@ -59,5 +60,12 @@ if __name__ == '__main__':
     rospy.init_node('test_fk')
     rospy.loginfo("Querying for FK")
     gfk = GetFK('end_effector_link', 'base_link')
+    ### write the main code here to get the real FK of the robot
+    
+    
+    
+    
+    
+    ### Display the FK of the robot
     resp = gfk.get_current_fk()
     rospy.loginfo(resp)
